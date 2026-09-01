@@ -5,7 +5,5 @@ dist/
 .env.*
 !.env.example
 .dev.vars
-.wrangler/
 .DS_Store
 Thumbs.db
-

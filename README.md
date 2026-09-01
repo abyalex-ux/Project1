@@ -20,7 +20,6 @@ public/                 Static files published by Cloudflare Pages
   _routes.json          Limits Function invocation to /api/*
 functions/              Cloudflare Pages Functions
   api/status.js         GET /api/status health endpoint
-wrangler.jsonc          Cloudflare Pages project configuration
 ```
 
 ## Local frontend preview
@@ -44,4 +43,4 @@ Use these settings:
 - Build output directory: `public`
 - Root directory: `/`
 
-The `functions/` directory is detected automatically and deploys `/api/status` with the site. The committed `wrangler.jsonc` is the production configuration source of truth.
+The `functions/` directory is detected automatically and deploys `/api/status` with the site. No command-line deployment tool or build step is required.
