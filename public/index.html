@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07111f" />
+    <meta
+      name="description"
+      content="Project1 is a lightweight web starter built with plain HTML, CSS, native JavaScript modules, and Cloudflare Pages Functions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Project1 — Web platform, edge runtime" />
+    <meta
+      property="og:description"
+      content="Built on the web platform. Deployed at the edge."
+    />
+    <meta property="og:image" content="/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Project1 — Web platform, edge runtime" />
+    <meta
+      name="twitter:description"
+      content="Built on the web platform. Deployed at the edge."
+    />
+    <meta name="twitter:image" content="/assets/og.png" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Project1 — Web platform, edge runtime</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Project1 home">
+        <span class="brand-mark" aria-hidden="true">P1</span>
+        <span>Project1</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#architecture">Architecture</a>
+        <a href="https://github.com/abyalex-ux/Project1" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span aria-hidden="true"></span> Zero-framework web starter</p>
+          <h1 id="hero-title">The web platform,<br /><em>without the weight.</em></h1>
+          <p class="intro">
+            Plain HTML and CSS in the browser. Native JavaScript modules for behavior.
+            Cloudflare Pages Functions where server-side logic belongs.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="check-api" type="button">
+              Check edge function
+              <span aria-hidden="true">↗</span>
+            </button>
+            <a class="button button-secondary" href="#architecture">Explore the stack</a>
+          </div>
+        </div>
+
+        <aside class="runtime-card" aria-labelledby="runtime-title">
+          <div class="runtime-header">
+            <div>
+              <p class="label">Live runtime</p>
+              <h2 id="runtime-title">Edge status</h2>
+            </div>
+            <span class="status-pill" id="status-pill" data-state="idle">
+              <span aria-hidden="true"></span>
+              <span id="status-label">Ready</span>
+            </span>
+          </div>
+          <dl class="runtime-grid" aria-live="polite">
+            <div>
+              <dt>Service</dt>
+              <dd id="service-value">Pages Functions</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd id="location-value">Edge network</dd>
+            </div>
+            <div>
+              <dt>Response</dt>
+              <dd id="response-value">Waiting</dd>
+            </div>
+            <div>
+              <dt>Request ID</dt>
+              <dd id="request-value">—</dd>
+            </div>
+          </dl>
+          <p class="runtime-note" id="runtime-note">
+            Calls <code>/api/status</code> on the same Cloudflare deployment.
+          </p>
+        </aside>
+      </section>
+
+      <section class="architecture" id="architecture" aria-labelledby="architecture-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span aria-hidden="true"></span> Deliberately simple</p>
+          <h2 id="architecture-title">Three layers. Clear boundaries.</h2>
+          <p>No framework lifecycle, hidden build pipeline, or client-side runtime to maintain.</p>
+        </div>
+
+        <ol class="stack-list">
+          <li>
+            <span class="stack-number">01</span>
+            <div>
+              <h3>Semantic HTML</h3>
+              <p>Accessible structure and content that works before JavaScript arrives.</p>
+            </div>
+            <span class="stack-tag">Document</span>
+          </li>
+          <li>
+            <span class="stack-number">02</span>
+            <div>
+              <h3>CSS + native modules</h3>
+              <p>Responsive presentation and focused behavior using browser standards.</p>
+            </div>
+            <span class="stack-tag">Browser</span>
+          </li>
+          <li>
+            <span class="stack-number">03</span>
+            <div>
+              <h3>Pages Functions</h3>
+              <p>Server-side endpoints running close to visitors on Cloudflare's network.</p>
+            </div>
+            <span class="stack-tag stack-tag-accent">Edge</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>Project1 <span aria-hidden="true">·</span> Built with browser standards</p>
+      <p>© <span id="year"></span> abyalex-ux</p>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
